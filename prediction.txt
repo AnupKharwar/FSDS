@@ -1,0 +1,1 @@
+[{"id":"1","Prediction":"Approved","Val":"88%"},{"id":"2","Prediction":"Denied","Val":"22%"},{"id":"3","Prediction":"Approved","Val":"36%"},{"id":"4","Prediction":"Approved","Val":"45%"},{"id":"5","Prediction":"Denied","Val":"98%"}]

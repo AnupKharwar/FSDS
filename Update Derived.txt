@@ -1,0 +1,433 @@
+UPDATE ML_Claim_DataExtract_Output SET Derived_OL3_Quantity = CASE WHEN LEFT(OL3_Quantity,1) != '0' AND LEFT(OL3_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL3_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL3_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL3_ServiceToDate,'12/31/2050')
+				AND LEFT(OL3_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL3_SameRenderingProviderNPI = CASE WHEN ISNULL(OL3_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL3_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL3_AllowedAmount = CASE WHEN ISNULL(OL3_AllowedAmount,0) > 0 AND LEFT(OL3_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL4_Quantity = CASE WHEN LEFT(OL4_Quantity,1) != '0' AND LEFT(OL4_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL4_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL4_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL4_ServiceToDate,'12/31/2050')
+				AND LEFT(OL4_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL4_SameRenderingProviderNPI = CASE WHEN ISNULL(OL4_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL4_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL4_AllowedAmount = CASE WHEN ISNULL(OL4_AllowedAmount,0) > 0 AND LEFT(OL4_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL5_Quantity = CASE WHEN LEFT(OL5_Quantity,1) != '0' AND LEFT(OL5_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL5_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL5_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL5_ServiceToDate,'12/31/2050')
+				AND LEFT(OL5_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL5_SameRenderingProviderNPI = CASE WHEN ISNULL(OL5_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL5_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL5_AllowedAmount = CASE WHEN ISNULL(OL5_AllowedAmount,0) > 0 AND LEFT(OL5_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL6_Quantity = CASE WHEN LEFT(OL6_Quantity,1) != '0' AND LEFT(OL6_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL6_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL6_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL6_ServiceToDate,'12/31/2050')
+				AND LEFT(OL6_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL6_SameRenderingProviderNPI = CASE WHEN ISNULL(OL6_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL6_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL6_AllowedAmount = CASE WHEN ISNULL(OL6_AllowedAmount,0) > 0 AND LEFT(OL6_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL7_Quantity = CASE WHEN LEFT(OL7_Quantity,1) != '0' AND LEFT(OL7_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL7_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL7_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL7_ServiceToDate,'12/31/2050')
+				AND LEFT(OL7_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL7_SameRenderingProviderNPI = CASE WHEN ISNULL(OL7_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL7_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL7_AllowedAmount = CASE WHEN ISNULL(OL7_AllowedAmount,0) > 0 AND LEFT(OL7_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL8_Quantity = CASE WHEN LEFT(OL8_Quantity,1) != '0' AND LEFT(OL8_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL8_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL8_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL8_ServiceToDate,'12/31/2050')
+				AND LEFT(OL8_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL8_SameRenderingProviderNPI = CASE WHEN ISNULL(OL8_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL8_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL8_AllowedAmount = CASE WHEN ISNULL(OL8_AllowedAmount,0) > 0 AND LEFT(OL8_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL9_Quantity = CASE WHEN LEFT(OL9_Quantity,1) != '0' AND LEFT(OL9_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL9_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL9_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL9_ServiceToDate,'12/31/2050')
+				AND LEFT(OL9_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL9_SameRenderingProviderNPI = CASE WHEN ISNULL(OL9_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL9_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL9_AllowedAmount = CASE WHEN ISNULL(OL9_AllowedAmount,0) > 0 AND LEFT(OL9_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL10_Quantity = CASE WHEN LEFT(OL10_Quantity,1) != '0' AND LEFT(OL10_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL10_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL10_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL10_ServiceToDate,'12/31/2050')
+				AND LEFT(OL10_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL10_SameRenderingProviderNPI = CASE WHEN ISNULL(OL10_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL10_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL10_AllowedAmount = CASE WHEN ISNULL(OL10_AllowedAmount,0) > 0 AND LEFT(OL10_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL11_Quantity = CASE WHEN LEFT(OL11_Quantity,1) != '0' AND LEFT(OL11_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL11_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL11_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL11_ServiceToDate,'12/31/2050')
+				AND LEFT(OL11_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL11_SameRenderingProviderNPI = CASE WHEN ISNULL(OL11_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL11_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL11_AllowedAmount = CASE WHEN ISNULL(OL11_AllowedAmount,0) > 0 AND LEFT(OL11_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL12_Quantity = CASE WHEN LEFT(OL12_Quantity,1) != '0' AND LEFT(OL12_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL12_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL12_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL12_ServiceToDate,'12/31/2050')
+				AND LEFT(OL12_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL12_SameRenderingProviderNPI = CASE WHEN ISNULL(OL12_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL12_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL12_AllowedAmount = CASE WHEN ISNULL(OL12_AllowedAmount,0) > 0 AND LEFT(OL12_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL13_Quantity = CASE WHEN LEFT(OL13_Quantity,1) != '0' AND LEFT(OL13_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL13_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL13_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL13_ServiceToDate,'12/31/2050')
+				AND LEFT(OL13_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL13_SameRenderingProviderNPI = CASE WHEN ISNULL(OL13_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL13_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL13_AllowedAmount = CASE WHEN ISNULL(OL13_AllowedAmount,0) > 0 AND LEFT(OL13_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL14_Quantity = CASE WHEN LEFT(OL14_Quantity,1) != '0' AND LEFT(OL14_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL14_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL14_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL14_ServiceToDate,'12/31/2050')
+				AND LEFT(OL14_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL14_SameRenderingProviderNPI = CASE WHEN ISNULL(OL14_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL14_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL14_AllowedAmount = CASE WHEN ISNULL(OL14_AllowedAmount,0) > 0 AND LEFT(OL14_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL15_Quantity = CASE WHEN LEFT(OL15_Quantity,1) != '0' AND LEFT(OL15_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL15_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL15_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL15_ServiceToDate,'12/31/2050')
+				AND LEFT(OL15_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL15_SameRenderingProviderNPI = CASE WHEN ISNULL(OL15_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL15_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL15_AllowedAmount = CASE WHEN ISNULL(OL15_AllowedAmount,0) > 0 AND LEFT(OL15_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL16_Quantity = CASE WHEN LEFT(OL16_Quantity,1) != '0' AND LEFT(OL16_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL16_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL16_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL16_ServiceToDate,'12/31/2050')
+				AND LEFT(OL16_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL16_SameRenderingProviderNPI = CASE WHEN ISNULL(OL16_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL16_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL16_AllowedAmount = CASE WHEN ISNULL(OL16_AllowedAmount,0) > 0 AND LEFT(OL16_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL17_Quantity = CASE WHEN LEFT(OL17_Quantity,1) != '0' AND LEFT(OL17_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL17_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL17_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL17_ServiceToDate,'12/31/2050')
+				AND LEFT(OL17_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL17_SameRenderingProviderNPI = CASE WHEN ISNULL(OL17_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL17_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL17_AllowedAmount = CASE WHEN ISNULL(OL17_AllowedAmount,0) > 0 AND LEFT(OL17_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL18_Quantity = CASE WHEN LEFT(OL18_Quantity,1) != '0' AND LEFT(OL18_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL18_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL18_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL18_ServiceToDate,'12/31/2050')
+				AND LEFT(OL18_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL18_SameRenderingProviderNPI = CASE WHEN ISNULL(OL18_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL18_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL18_AllowedAmount = CASE WHEN ISNULL(OL18_AllowedAmount,0) > 0 AND LEFT(OL18_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL19_Quantity = CASE WHEN LEFT(OL19_Quantity,1) != '0' AND LEFT(OL19_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL19_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL19_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL19_ServiceToDate,'12/31/2050')
+				AND LEFT(OL19_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL19_SameRenderingProviderNPI = CASE WHEN ISNULL(OL19_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL19_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL19_AllowedAmount = CASE WHEN ISNULL(OL19_AllowedAmount,0) > 0 AND LEFT(OL19_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL20_Quantity = CASE WHEN LEFT(OL20_Quantity,1) != '0' AND LEFT(OL20_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL20_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL20_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL20_ServiceToDate,'12/31/2050')
+				AND LEFT(OL20_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL20_SameRenderingProviderNPI = CASE WHEN ISNULL(OL20_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL20_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL20_AllowedAmount = CASE WHEN ISNULL(OL20_AllowedAmount,0) > 0 AND LEFT(OL20_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL21_Quantity = CASE WHEN LEFT(OL21_Quantity,1) != '0' AND LEFT(OL21_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL21_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL21_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL21_ServiceToDate,'12/31/2050')
+				AND LEFT(OL21_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL21_SameRenderingProviderNPI = CASE WHEN ISNULL(OL21_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL21_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL21_AllowedAmount = CASE WHEN ISNULL(OL21_AllowedAmount,0) > 0 AND LEFT(OL21_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL22_Quantity = CASE WHEN LEFT(OL22_Quantity,1) != '0' AND LEFT(OL22_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL22_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL22_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL22_ServiceToDate,'12/31/2050')
+				AND LEFT(OL22_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL22_SameRenderingProviderNPI = CASE WHEN ISNULL(OL22_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL22_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL22_AllowedAmount = CASE WHEN ISNULL(OL22_AllowedAmount,0) > 0 AND LEFT(OL22_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL23_Quantity = CASE WHEN LEFT(OL23_Quantity,1) != '0' AND LEFT(OL23_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL23_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL23_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL23_ServiceToDate,'12/31/2050')
+				AND LEFT(OL23_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL23_SameRenderingProviderNPI = CASE WHEN ISNULL(OL23_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL23_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL23_AllowedAmount = CASE WHEN ISNULL(OL23_AllowedAmount,0) > 0 AND LEFT(OL23_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL24_Quantity = CASE WHEN LEFT(OL24_Quantity,1) != '0' AND LEFT(OL24_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL24_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL24_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL24_ServiceToDate,'12/31/2050')
+				AND LEFT(OL24_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL24_SameRenderingProviderNPI = CASE WHEN ISNULL(OL24_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL24_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL24_AllowedAmount = CASE WHEN ISNULL(OL24_AllowedAmount,0) > 0 AND LEFT(OL24_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL25_Quantity = CASE WHEN LEFT(OL25_Quantity,1) != '0' AND LEFT(OL25_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL25_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL25_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL25_ServiceToDate,'12/31/2050')
+				AND LEFT(OL25_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL25_SameRenderingProviderNPI = CASE WHEN ISNULL(OL25_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL25_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL25_AllowedAmount = CASE WHEN ISNULL(OL25_AllowedAmount,0) > 0 AND LEFT(OL25_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL26_Quantity = CASE WHEN LEFT(OL26_Quantity,1) != '0' AND LEFT(OL26_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL26_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL26_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL26_ServiceToDate,'12/31/2050')
+				AND LEFT(OL26_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL26_SameRenderingProviderNPI = CASE WHEN ISNULL(OL26_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL26_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL26_AllowedAmount = CASE WHEN ISNULL(OL26_AllowedAmount,0) > 0 AND LEFT(OL26_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL27_Quantity = CASE WHEN LEFT(OL27_Quantity,1) != '0' AND LEFT(OL27_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL27_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL27_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL27_ServiceToDate,'12/31/2050')
+				AND LEFT(OL27_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL27_SameRenderingProviderNPI = CASE WHEN ISNULL(OL27_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL27_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL27_AllowedAmount = CASE WHEN ISNULL(OL27_AllowedAmount,0) > 0 AND LEFT(OL27_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL28_Quantity = CASE WHEN LEFT(OL28_Quantity,1) != '0' AND LEFT(OL28_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL28_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL28_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL28_ServiceToDate,'12/31/2050')
+				AND LEFT(OL28_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL28_SameRenderingProviderNPI = CASE WHEN ISNULL(OL28_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL28_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL28_AllowedAmount = CASE WHEN ISNULL(OL28_AllowedAmount,0) > 0 AND LEFT(OL28_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL29_Quantity = CASE WHEN LEFT(OL29_Quantity,1) != '0' AND LEFT(OL29_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL29_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL29_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL29_ServiceToDate,'12/31/2050')
+				AND LEFT(OL29_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL29_SameRenderingProviderNPI = CASE WHEN ISNULL(OL29_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL29_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL29_AllowedAmount = CASE WHEN ISNULL(OL29_AllowedAmount,0) > 0 AND LEFT(OL29_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL30_Quantity = CASE WHEN LEFT(OL30_Quantity,1) != '0' AND LEFT(OL30_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL30_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL30_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL30_ServiceToDate,'12/31/2050')
+				AND LEFT(OL30_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL30_SameRenderingProviderNPI = CASE WHEN ISNULL(OL30_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL30_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL30_AllowedAmount = CASE WHEN ISNULL(OL30_AllowedAmount,0) > 0 AND LEFT(OL30_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL31_Quantity = CASE WHEN LEFT(OL31_Quantity,1) != '0' AND LEFT(OL31_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL31_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL31_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL31_ServiceToDate,'12/31/2050')
+				AND LEFT(OL31_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL31_SameRenderingProviderNPI = CASE WHEN ISNULL(OL31_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL31_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL31_AllowedAmount = CASE WHEN ISNULL(OL31_AllowedAmount,0) > 0 AND LEFT(OL31_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL32_Quantity = CASE WHEN LEFT(OL32_Quantity,1) != '0' AND LEFT(OL32_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL32_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL32_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL32_ServiceToDate,'12/31/2050')
+				AND LEFT(OL32_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL32_SameRenderingProviderNPI = CASE WHEN ISNULL(OL32_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL32_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL32_AllowedAmount = CASE WHEN ISNULL(OL32_AllowedAmount,0) > 0 AND LEFT(OL32_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL33_Quantity = CASE WHEN LEFT(OL33_Quantity,1) != '0' AND LEFT(OL33_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL33_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL33_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL33_ServiceToDate,'12/31/2050')
+				AND LEFT(OL33_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL33_SameRenderingProviderNPI = CASE WHEN ISNULL(OL33_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL33_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL33_AllowedAmount = CASE WHEN ISNULL(OL33_AllowedAmount,0) > 0 AND LEFT(OL33_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL34_Quantity = CASE WHEN LEFT(OL34_Quantity,1) != '0' AND LEFT(OL34_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL34_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL34_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL34_ServiceToDate,'12/31/2050')
+				AND LEFT(OL34_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL34_SameRenderingProviderNPI = CASE WHEN ISNULL(OL34_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL34_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL34_AllowedAmount = CASE WHEN ISNULL(OL34_AllowedAmount,0) > 0 AND LEFT(OL34_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL35_Quantity = CASE WHEN LEFT(OL35_Quantity,1) != '0' AND LEFT(OL35_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL35_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL35_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL35_ServiceToDate,'12/31/2050')
+				AND LEFT(OL35_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL35_SameRenderingProviderNPI = CASE WHEN ISNULL(OL35_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL35_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL35_AllowedAmount = CASE WHEN ISNULL(OL35_AllowedAmount,0) > 0 AND LEFT(OL35_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL36_Quantity = CASE WHEN LEFT(OL36_Quantity,1) != '0' AND LEFT(OL36_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL36_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL36_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL36_ServiceToDate,'12/31/2050')
+				AND LEFT(OL36_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL36_SameRenderingProviderNPI = CASE WHEN ISNULL(OL36_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL36_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL36_AllowedAmount = CASE WHEN ISNULL(OL36_AllowedAmount,0) > 0 AND LEFT(OL36_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL37_Quantity = CASE WHEN LEFT(OL37_Quantity,1) != '0' AND LEFT(OL37_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL37_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL37_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL37_ServiceToDate,'12/31/2050')
+				AND LEFT(OL37_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL37_SameRenderingProviderNPI = CASE WHEN ISNULL(OL37_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL37_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL37_AllowedAmount = CASE WHEN ISNULL(OL37_AllowedAmount,0) > 0 AND LEFT(OL37_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL38_Quantity = CASE WHEN LEFT(OL38_Quantity,1) != '0' AND LEFT(OL38_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL38_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL38_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL38_ServiceToDate,'12/31/2050')
+				AND LEFT(OL38_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL38_SameRenderingProviderNPI = CASE WHEN ISNULL(OL38_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL38_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL38_AllowedAmount = CASE WHEN ISNULL(OL38_AllowedAmount,0) > 0 AND LEFT(OL38_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL39_Quantity = CASE WHEN LEFT(OL39_Quantity,1) != '0' AND LEFT(OL39_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL39_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL39_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL39_ServiceToDate,'12/31/2050')
+				AND LEFT(OL39_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL39_SameRenderingProviderNPI = CASE WHEN ISNULL(OL39_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL39_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL39_AllowedAmount = CASE WHEN ISNULL(OL39_AllowedAmount,0) > 0 AND LEFT(OL39_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL40_Quantity = CASE WHEN LEFT(OL40_Quantity,1) != '0' AND LEFT(OL40_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL40_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL40_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL40_ServiceToDate,'12/31/2050')
+				AND LEFT(OL40_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL40_SameRenderingProviderNPI = CASE WHEN ISNULL(OL40_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL40_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL40_AllowedAmount = CASE WHEN ISNULL(OL40_AllowedAmount,0) > 0 AND LEFT(OL40_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL41_Quantity = CASE WHEN LEFT(OL41_Quantity,1) != '0' AND LEFT(OL41_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL41_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL41_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL41_ServiceToDate,'12/31/2050')
+				AND LEFT(OL41_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL41_SameRenderingProviderNPI = CASE WHEN ISNULL(OL41_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL41_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL41_AllowedAmount = CASE WHEN ISNULL(OL41_AllowedAmount,0) > 0 AND LEFT(OL41_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL42_Quantity = CASE WHEN LEFT(OL42_Quantity,1) != '0' AND LEFT(OL42_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL42_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL42_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL42_ServiceToDate,'12/31/2050')
+				AND LEFT(OL42_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL42_SameRenderingProviderNPI = CASE WHEN ISNULL(OL42_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL42_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL42_AllowedAmount = CASE WHEN ISNULL(OL42_AllowedAmount,0) > 0 AND LEFT(OL42_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL43_Quantity = CASE WHEN LEFT(OL43_Quantity,1) != '0' AND LEFT(OL43_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL43_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL43_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL43_ServiceToDate,'12/31/2050')
+				AND LEFT(OL43_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL43_SameRenderingProviderNPI = CASE WHEN ISNULL(OL43_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL43_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL43_AllowedAmount = CASE WHEN ISNULL(OL43_AllowedAmount,0) > 0 AND LEFT(OL43_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL44_Quantity = CASE WHEN LEFT(OL44_Quantity,1) != '0' AND LEFT(OL44_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL44_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL44_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL44_ServiceToDate,'12/31/2050')
+				AND LEFT(OL44_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL44_SameRenderingProviderNPI = CASE WHEN ISNULL(OL44_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL44_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL44_AllowedAmount = CASE WHEN ISNULL(OL44_AllowedAmount,0) > 0 AND LEFT(OL44_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL45_Quantity = CASE WHEN LEFT(OL45_Quantity,1) != '0' AND LEFT(OL45_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL45_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL45_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL45_ServiceToDate,'12/31/2050')
+				AND LEFT(OL45_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL45_SameRenderingProviderNPI = CASE WHEN ISNULL(OL45_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL45_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL45_AllowedAmount = CASE WHEN ISNULL(OL45_AllowedAmount,0) > 0 AND LEFT(OL45_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL46_Quantity = CASE WHEN LEFT(OL46_Quantity,1) != '0' AND LEFT(OL46_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL46_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL46_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL46_ServiceToDate,'12/31/2050')
+				AND LEFT(OL46_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL46_SameRenderingProviderNPI = CASE WHEN ISNULL(OL46_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL46_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL46_AllowedAmount = CASE WHEN ISNULL(OL46_AllowedAmount,0) > 0 AND LEFT(OL46_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL47_Quantity = CASE WHEN LEFT(OL47_Quantity,1) != '0' AND LEFT(OL47_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL47_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL47_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL47_ServiceToDate,'12/31/2050')
+				AND LEFT(OL47_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL47_SameRenderingProviderNPI = CASE WHEN ISNULL(OL47_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL47_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL47_AllowedAmount = CASE WHEN ISNULL(OL47_AllowedAmount,0) > 0 AND LEFT(OL47_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL48_Quantity = CASE WHEN LEFT(OL48_Quantity,1) != '0' AND LEFT(OL48_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL48_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL48_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL48_ServiceToDate,'12/31/2050')
+				AND LEFT(OL48_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL48_SameRenderingProviderNPI = CASE WHEN ISNULL(OL48_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL48_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL48_AllowedAmount = CASE WHEN ISNULL(OL48_AllowedAmount,0) > 0 AND LEFT(OL48_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL49_Quantity = CASE WHEN LEFT(OL49_Quantity,1) != '0' AND LEFT(OL49_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL49_SameDates = CASE 
+			WHEN ISNULL(Line_ServiceFromDate,'1/1/2000') = ISNULL(OL49_ServiceFromDate,'1/1/2000')
+				AND ISNULL(Line_ServiceToDate,'12/31/2050') = ISNULL(OL49_ServiceToDate,'12/31/2050')
+				AND LEFT(OL49_LineNumber,1) != '0' THEN 1 
+			ELSE 0 
+		END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL49_SameRenderingProviderNPI = CASE WHEN ISNULL(OL49_RenderingProviderNPI,'') = ISNULL(Line_RenderingProviderNPI,ISNULL(Header_RenderingProviderNPI,'')) AND LEFT(OL49_LineNumber,1) != '0' THEN 1 ELSE 0 END
+		UPDATE ML_Claim_DataExtract_Output SET Derived_OL49_AllowedAmount = CASE WHEN ISNULL(OL49_AllowedAmount,0) > 0 AND LEFT(OL49_LineNumber,1) != '0' THEN 1 ELSE 0 END

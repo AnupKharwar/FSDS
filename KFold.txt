@@ -1,0 +1,11 @@
+from sklearn.model_selection import cross_val_score
+
+
+
+skf = StratifiedKFold(n_splits = 10)
+score = cross_val_score(rf_clf,x,y,cv=skf)
+
+
+
+print("Cross Validation Scores are {}".format(score))
+print("Average Cross Validation score :{}".format(score.mean()))
